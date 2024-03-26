@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "c2824583-1429-4668-bf07-4691102e2e34",
+		"name": "Node JS API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16210587"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"onesinus\",\r\n    \"password\": 123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login (get token)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"onesinus\",\r\n    \"password\": 123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Jobs List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjAyZmEwMzUxOGJhZTdlZmQ0MTQwOTYiLCJ1c2VybmFtZSI6Im9uZXNpbnVzIiwiaWF0IjoxNzExNDcxNTAzfQ.2XfTEio0xrSwiDKBLOiorV7MU0Jg04O6EpheB9EgnUg",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/jobs"
+			},
+			"response": []
+		},
+		{
+			"name": "Jobs List Detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjAyZmEwMzUxOGJhZTdlZmQ0MTQwOTYiLCJ1c2VybmFtZSI6Im9uZXNpbnVzIiwiaWF0IjoxNzExNDcxNTAzfQ.2XfTEio0xrSwiDKBLOiorV7MU0Jg04O6EpheB9EgnUg",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/jobs/7638eee4-4e75-4c06-a920-ea7619a311b5"
+			},
+			"response": []
+		},
+		{
+			"name": "Jobs List with Querystring",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjAyZmEwMzUxOGJhZTdlZmQ0MTQwOTYiLCJ1c2VybmFtZSI6Im9uZXNpbnVzIiwiaWF0IjoxNzExNDcxNTAzfQ.2XfTEio0xrSwiDKBLOiorV7MU0Jg04O6EpheB9EgnUg",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/jobs/32bf67e5-4971-47ce-985c-44b6b3860cdb"
+			},
+			"response": []
+		},
+		{
+			"name": "Jobs List with Pagination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjAyZmEwMzUxOGJhZTdlZmQ0MTQwOTYiLCJ1c2VybmFtZSI6Im9uZXNpbnVzIiwiaWF0IjoxNzExNDcxNTAzfQ.2XfTEio0xrSwiDKBLOiorV7MU0Jg04O6EpheB9EgnUg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/jobs?page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"jobs"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
