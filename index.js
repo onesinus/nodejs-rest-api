@@ -12,9 +12,13 @@ app.use(cors()); // Enable CORS
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+
 app.use('/auth', authRoutes);
 app.use('/api', jobRoutes);
 app.use('/user', userRoutes);
+app.use('/', (req, res) => {
+  res.status(200).json({ healthcheck: `It works` });
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
